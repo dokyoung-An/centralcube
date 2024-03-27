@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.10/20025
 // Filename: ?? VR 1??? - ????.ggsk
-// Generated 2024-03-27T19:58:32
+// Generated 2024-03-27T20:03:10
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_floorplan', 2, false, { ignoreInState: 0  });
@@ -2046,7 +2046,7 @@ function pano2vrSkin(player,base) {
 				me._footer.style.transition='width 0s, height 0s';
 				if (me._footer.ggCurrentLogicStateSize == 0) {
 					me._footer.style.width='100%';
-					me._footer.style.height='120px';
+					me._footer.style.height='100px';
 					skin.updateSize(me._footer);
 				}
 				else {
@@ -2298,419 +2298,24 @@ function pano2vrSkin(player,base) {
 		me._footer_infom.logicBlock_visible();
 		me._footer_infom.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._scrollarea_2=document.createElement('div');
-		els=me._scrollarea_2__content=document.createElement('div');
-		els.className='ggskin ggskin_subelement ggskin_scrollarea';
-		el.ggContent=els;
-		el.appendChild(els);
-		el.ggHorScrollVisible = false;
-		el.ggVertScrollVisible = false;
-		el.ggContentLeftOffset = 0;
-		el.ggContentTopOffset = 0;
-		el.ggContentWidth = 0;
-		el.ggContentHeight = 0;
-		el.ggDragInertiaX = 0;
-		el.ggDragInertiaY = 0;
-		el.ggVPercentVisible = 1.0;
-		el.ggHPercentVisible = 1.0;
-		el.ggIsDragging = false;
-		hs ='';
-		hs+='height : 54.675px;';
-		hs+='left : 0px;';
-		hs+='overflow-x : visible;';
-		hs+='overflow-y : visible;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='width : 613.4px;';
-		hs+="";
-		els.setAttribute('style',hs);
-		me._scrollarea_2.ggScrollByX = function(diffX) {
-			if(!me._scrollarea_2.ggHorScrollVisible || diffX == 0 || me._scrollarea_2.ggHPercentVisible >= 1.0) return;
-			me._scrollarea_2.ggScrollPosX = (me._scrollarea_2__horScrollFg.offsetLeft + diffX);
-			me._scrollarea_2.ggScrollPosX = Math.max(me._scrollarea_2.ggScrollPosX, 0);
-			me._scrollarea_2.ggScrollPosX = Math.min(me._scrollarea_2.ggScrollPosX, me._scrollarea_2__horScrollBg.offsetWidth - me._scrollarea_2__horScrollFg.offsetWidth);
-			me._scrollarea_2__horScrollFg.style.left = me._scrollarea_2.ggScrollPosX + 'px';
-			let percentScrolled = me._scrollarea_2.ggScrollPosX / (me._scrollarea_2__horScrollBg.offsetWidth - me._scrollarea_2__horScrollFg.offsetWidth);
-			me._scrollarea_2__content.style.left = -(Math.round((me._scrollarea_2.ggContentWidth * (1.0 - me._scrollarea_2.ggHPercentVisible)) * percentScrolled)) + me._scrollarea_2.ggContentLeftOffset + 'px';
-			me._scrollarea_2.ggScrollPosXPercent = (me._scrollarea_2__horScrollFg.offsetLeft / me._scrollarea_2__horScrollBg.offsetWidth);
-		}
-		me._scrollarea_2.ggScrollByXSmooth = function(diffX) {
-			if(!me._scrollarea_2.ggHorScrollVisible || diffX == 0 || me._scrollarea_2.ggHPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffX / 25;
-			var scrollCurrX = 0;
-			var id = setInterval(function() {
-				scrollCurrX += scrollPerInterval;
-				me._scrollarea_2.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._scrollarea_2.ggScrollPosX >= me._scrollarea_2__horScrollBg.offsetWidth - me._scrollarea_2__horScrollFg.offsetWidth)) {
-					me._scrollarea_2.ggScrollPosX = Math.min(me._scrollarea_2.ggScrollPosX, me._scrollarea_2__horScrollBg.offsetWidth - me._scrollarea_2__horScrollFg.offsetWidth);
-					clearInterval(id);
-				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._scrollarea_2.ggScrollPosX <= 0)) {
-					me._scrollarea_2.ggScrollPosX = Math.max(me._scrollarea_2.ggScrollPosX, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_2__horScrollFg.style.left = me._scrollarea_2.ggScrollPosX + 'px';
-			let percentScrolled = me._scrollarea_2.ggScrollPosX / (me._scrollarea_2__horScrollBg.offsetWidth - me._scrollarea_2__horScrollFg.offsetWidth);
-			me._scrollarea_2__content.style.left = -(Math.round((me._scrollarea_2.ggContentWidth * (1.0 - me._scrollarea_2.ggHPercentVisible)) * percentScrolled)) + me._scrollarea_2.ggContentLeftOffset + 'px';
-			me._scrollarea_2.ggScrollPosXPercent = (me._scrollarea_2__horScrollFg.offsetLeft / me._scrollarea_2__horScrollBg.offsetWidth);
-			}, 10);
-		}
-		me._scrollarea_2.ggScrollByY = function(diffY) {
-			if(!me._scrollarea_2.ggVertScrollVisible || diffY == 0 || me._scrollarea_2.ggVPercentVisible >= 1.0) return;
-			me._scrollarea_2.ggScrollPosY = (me._scrollarea_2__vertScrollFg.offsetTop + diffY);
-			me._scrollarea_2.ggScrollPosY = Math.max(me._scrollarea_2.ggScrollPosY, 0);
-			me._scrollarea_2.ggScrollPosY = Math.min(me._scrollarea_2.ggScrollPosY, me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-			me._scrollarea_2__vertScrollFg.style.top = me._scrollarea_2.ggScrollPosY + 'px';
-			let percentScrolled = me._scrollarea_2.ggScrollPosY / (me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-			me._scrollarea_2__content.style.top = -(Math.round((me._scrollarea_2.ggContentHeight * (1.0 - me._scrollarea_2.ggVPercentVisible)) * percentScrolled)) + me._scrollarea_2.ggContentTopOffset + 'px';
-			me._scrollarea_2.ggScrollPosYPercent = (me._scrollarea_2__vertScrollFg.offsetTop / me._scrollarea_2__vertScrollBg.offsetHeight);
-		}
-		me._scrollarea_2.ggScrollByYSmooth = function(diffY) {
-			if(!me._scrollarea_2.ggVertScrollVisible || diffY == 0 || me._scrollarea_2.ggVPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffY / 25;
-			var scrollCurrY = 0;
-			var id = setInterval(function() {
-				scrollCurrY += scrollPerInterval;
-				me._scrollarea_2.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._scrollarea_2.ggScrollPosY >= me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight)) {
-					me._scrollarea_2.ggScrollPosY = Math.min(me._scrollarea_2.ggScrollPosY, me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-					clearInterval(id);
-				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._scrollarea_2.ggScrollPosY <= 0)) {
-					me._scrollarea_2.ggScrollPosY = Math.max(me._scrollarea_2.ggScrollPosY, 0);
-					clearInterval(id);
-				}
-			me._scrollarea_2__vertScrollFg.style.top = me._scrollarea_2.ggScrollPosY + 'px';
-			let percentScrolled = me._scrollarea_2.ggScrollPosY / (me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-			me._scrollarea_2__content.style.top = -(Math.round((me._scrollarea_2.ggContentHeight * (1.0 - me._scrollarea_2.ggVPercentVisible)) * percentScrolled)) + me._scrollarea_2.ggContentTopOffset + 'px';
-			me._scrollarea_2.ggScrollPosYPercent = (me._scrollarea_2__vertScrollFg.offsetTop / me._scrollarea_2__vertScrollBg.offsetHeight);
-			}, 10);
-		}
-		me._scrollarea_2.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._scrollarea_2.ggHorScrollVisible) {
-				if (posX < 0) {
-					var diffX = Math.floor(posX * me._scrollarea_2.ggHPercentVisible);
-					me._scrollarea_2.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._scrollarea_2.clientWidth - (me._scrollarea_2.ggVertScrollVisible ? 4 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._scrollarea_2.clientWidth - (me._scrollarea_2.ggVertScrollVisible ? 4 : 0))) * me._scrollarea_2.ggHPercentVisible);
-					me._scrollarea_2.ggScrollByXSmooth(diffX);
-				}
-			}
-			if (me._scrollarea_2.ggVertScrollVisible) {
-				if (posY < 0) {
-					var diffY = Math.floor(posY * me._scrollarea_2.ggVPercentVisible);
-					me._scrollarea_2.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._scrollarea_2.clientHeight - (me._scrollarea_2.ggHorScrollVisible ? 4 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._scrollarea_2.clientHeight - (me._scrollarea_2.ggHorScrollVisible ? 4 : 0))) * me._scrollarea_2.ggVPercentVisible);
-					me._scrollarea_2.ggScrollByYSmooth(diffY);
-				}
-			}
-		}
-		me._scrollarea_2__content.mousetouchend = e => {
-			let inertiaInterval = setInterval(function() {
-				me._scrollarea_2.ggDragInertiaX *= 0.65;
-				me._scrollarea_2.ggDragInertiaY *= 0.65;
-				me._scrollarea_2.ggScrollByX(me._scrollarea_2.ggDragInertiaX);
-				me._scrollarea_2.ggScrollByY(me._scrollarea_2.ggDragInertiaY);
-				if (Math.abs(me._scrollarea_2.ggDragInertiaX) < 1.0 && Math.abs(me._scrollarea_2.ggDragInertiaY) < 1.0) {
-					clearInterval(inertiaInterval);
-				}
-				}, 50);
-			me._scrollarea_2__content.onmouseup = null;
-			me._scrollarea_2__content.onmousemove = null;
-			me._scrollarea_2__content.ontouchend = null;
-			me._scrollarea_2__content.ontouchmove = null;
-			me._scrollarea_2__content.onpointerup = null;
-			me._scrollarea_2__content.onpointermove = null;
-			setTimeout(function() { me._scrollarea_2.ggIsDragging = false; }, 100);
-		}
-		me._scrollarea_2__content.mousetouchmove = e => {
-			e = e || window.event;
-			e.preventDefault();
-			var t = e.touches;
-			var eventX = t ? t[0].clientX : e.clientX;
-			var eventY = t ? t[0].clientY : e.clientY;
-			if (Math.abs(eventX - me._scrollarea_2.ggDragStartX) > 10 || Math.abs(eventY - me._scrollarea_2.ggDragStartY) > 10) me._scrollarea_2.ggIsDragging = true;
-			var diffX = (eventX - me._scrollarea_2.ggDragLastX) * me._scrollarea_2.ggHPercentVisible;
-			var diffY = (eventY - me._scrollarea_2.ggDragLastY) * me._scrollarea_2.ggVPercentVisible;
-			me._scrollarea_2.ggDragInertiaX = -diffX;
-			me._scrollarea_2.ggDragInertiaY = -diffY;
-			me._scrollarea_2.ggDragLastX = eventX;
-			me._scrollarea_2.ggDragLastY = eventY;
-			me._scrollarea_2.ggScrollByX(-diffX);
-			me._scrollarea_2.ggScrollByY(-diffY);
-		}
-		me._scrollarea_2__content.mousetouchstart = e => {
-			e = e || window.event;
-			var t = e.touches;
-			me._scrollarea_2.ggDragLastX = me._scrollarea_2.ggDragStartX = t ? t[0].clientX : e.clientX;
-			me._scrollarea_2.ggDragLastY = me._scrollarea_2.ggDragStartY = t ? t[0].clientY : e.clientY;
-			me._scrollarea_2__content.onmouseup = me._scrollarea_2__content.mousetouchend;
-			me._scrollarea_2__content.ontouchend = me._scrollarea_2__content.mousetouchend;
-			me._scrollarea_2__content.onmousemove = me._scrollarea_2__content.mousetouchmove;
-			me._scrollarea_2__content.ontouchmove = me._scrollarea_2__content.mousetouchmove;
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				me._scrollarea_2__content.onpointerup = me._scrollarea_2__content.ontouchend;
-				me._scrollarea_2__content.onpointermove = me._scrollarea_2__content.ontouchmove;
-			}
-		}
-		els.onmousedown = me._scrollarea_2__content.mousetouchstart;
-		els.ontouchstart = me._scrollarea_2__content.mousetouchstart;
-		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			els.onpointerdown = me._scrollarea_2__content.mousetouchstart;
-		}
-		elVertScrollBg = me._scrollarea_2__vertScrollBg = document.createElement('div');
-		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 4px; height: 68px; background-color: rgba(128,128,128,1); pointer-events: auto;');
-		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._scrollarea_2__vertScrollFg = document.createElement('div');
-		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 4px; height: 68px; background-color: rgba(192,192,192,1); pointer-events: auto;');
-		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._scrollarea_2.ggScrollPosY = 0;
-		me._scrollarea_2.ggScrollPosYPercent = 0.0;
-		elVertScrollFg.onmousedown = function(e) {
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			me._scrollarea_2.ggDragLastY = e.clientY;
-			document.onmouseup = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_2.ggDragInertiaY *= 0.65;
-					me._scrollarea_2.ggScrollByY(me._scrollarea_2.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_2.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.onmouseup = null;
-				document.onmousemove = null;
-			}
-			document.onmousemove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var diffY = e.clientY - me._scrollarea_2.ggDragLastY;
-				me._scrollarea_2.ggDragInertiaY = diffY;
-				me._scrollarea_2.ggDragLastY = e.clientY;
-				me._scrollarea_2.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollFg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			me._scrollarea_2.ggDragLastY = t ? t[0].clientY : e.clientY;
-			document.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_2.ggDragInertiaY *= 0.65;
-					me._scrollarea_2.ggScrollByY(me._scrollarea_2.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_2.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.ontouchend = null;
-				document.ontouchmove = null;
-				document.onpointerup = null;
-				document.onpointermove = null;
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointerup = document.ontouchend;
-			}
-			document.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffY = (t ? t[0].clientY : e.clientY) - me._scrollarea_2.ggDragLastY;
-				me._scrollarea_2.ggDragInertiaY = diffY;
-				me._scrollarea_2.ggDragLastY = t ? t[0].clientY : e.clientY;
-				me._scrollarea_2.ggScrollByY(diffY);
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointermove = document.ontouchmove;
-			}
-		}
-		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			elVertScrollFg.onpointerdown = elVertScrollFg.ontouchstart;
-		}
-		elVertScrollBg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			var diffY = me._scrollarea_2.ggScrollHeight;
-			if (e.offsetY < me._scrollarea_2.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_2.ggScrollByYSmooth(diffY);
-		}
-		elVertScrollBg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			var rect = me._scrollarea_2__vertScrollBg.getBoundingClientRect();
-			var diffY = me._scrollarea_2.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._scrollarea_2.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_2.ggScrollByYSmooth(diffY);
-		}
-		el.addEventListener('wheel', function(e) {
-			e.preventDefault();
-			var wheelDelta = Math.sign(e.deltaY);
-			me._scrollarea_2.ggScrollByYSmooth(30 * me._scrollarea_2.ggVPercentVisible * wheelDelta);
-		});
-		elCornerBg = me._scrollarea_2__cornerBg = document.createElement('div');
-		el.appendChild(elCornerBg);
-		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 4px; height: 4px; background-color: rgba(255,255,255,1);');
-		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="Scrollarea 2";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_scrollarea ";
-		el.ggType='scrollarea';
-		hs ='';
-		hs+='border : 0px solid #000000;';
-		hs+='height : 100%;';
-		hs+='left : 0px;';
-		hs+='overflow : hidden;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : inherit;';
-		hs+='width : 100%;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._scrollarea_2.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._scrollarea_2.ggUpdatePosition=function (useTransition) {
-			{
-				var horScrollWasVisible = this.ggHorScrollVisible;
-				var vertScrollWasVisible = this.ggVertScrollVisible;
-				this.ggContent.style.left = '0px';
-				this.ggContent.style.top = '0px';
-				this.ggContentLeftOffset = 0;
-				this.ggContentTopOffset = 0;
-				var offsetWidthWithScale = this.getBoundingClientRect().width;
-				var offsetHeightWithScale = this.getBoundingClientRect().height;
-				var domRectContent = this.ggContent.getBoundingClientRect();
-				var minX = 0;
-				var minY = 0;
-				var maxX = 0;
-				var maxY = 0;
-				var stack=[];
-				stack.push(this.ggContent);
-				while(stack.length>0) {
-					var e=stack.pop();
-					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none' && (e.offsetWidth != 0 || e.offsetHeight != 0)) {
-						var domRectChild = e.getBoundingClientRect();
-						var diffX = domRectChild.left - domRectContent.left;
-						minX = Math.min(minX, diffX);
-						maxX = Math.max(maxX, diffX + domRectChild.width);
-						var diffY = domRectChild.top - domRectContent.top;
-						minY = Math.min(minY, diffY);
-						maxY = Math.max(maxY, diffY + domRectChild.height);
-					}
-					if (e.hasChildNodes() && e.style['display']!='none' && e.style['overflow']!='hidden') {
-						for(var i=0;i<e.childNodes.length;i++) {
-							stack.push(e.childNodes[i]);
-						}
-					}
-				}
-				if (minX < 0) this.ggContentLeftOffset = -minX;
-				if (minY < 0) this.ggContentTopOffset = -minY;
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.top = this.ggContentTopOffset + 'px';
-				var contentWidth = maxX - minX;
-				this.ggContent.style.width = contentWidth + 'px';
-				var contentHeight = maxY - minY;
-				this.ggContent.style.height = contentHeight + 'px';
-			var scaleX = this.getBoundingClientRect().width / this.offsetWidth;
-				this.ggContentWidth = contentWidth / scaleX;
-			var scaleY = this.getBoundingClientRect().height / this.offsetHeight;
-				this.ggContentHeight = contentHeight / scaleY;
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.marginLeft = '0px';
-				this.ggContent.style.top = -(Math.round(me._scrollarea_2.ggScrollPosY / me._scrollarea_2.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-				this.ggContent.style.marginTop = '0px';
-				if ((me._scrollarea_2.ggHorScrollVisible && contentHeight > this.clientHeight - 4) || (!me._scrollarea_2.ggHorScrollVisible && contentHeight > this.clientHeight)) {
-					me._scrollarea_2__vertScrollBg.style.visibility = 'inherit';
-					me._scrollarea_2__vertScrollFg.style.visibility = 'inherit';
-					me._scrollarea_2.ggVertScrollVisible = true;
-				} else {
-					me._scrollarea_2__vertScrollBg.style.visibility = 'hidden';
-					me._scrollarea_2__vertScrollFg.style.visibility = 'hidden';
-					me._scrollarea_2.ggVertScrollVisible = false;
-				}
-				if(me._scrollarea_2.ggVertScrollVisible) {
-					me._scrollarea_2.ggAvailableWidth = me._scrollarea_2.clientWidth - 4;
-					if (me._scrollarea_2.ggHorScrollVisible) {
-						me._scrollarea_2.ggAvailableHeight = me._scrollarea_2.clientHeight - 4;
-						me._scrollarea_2.ggAvailableHeightWithScale = me._scrollarea_2.getBoundingClientRect().height - me._scrollarea_2__vertScrollBg.getBoundingClientRect().width;
-						me._scrollarea_2__cornerBg.style.visibility = 'inherit';
-					} else {
-						me._scrollarea_2.ggAvailableHeight = me._scrollarea_2.clientHeight;
-						me._scrollarea_2.ggAvailableHeightWithScale = me._scrollarea_2.getBoundingClientRect().height;
-						me._scrollarea_2__cornerBg.style.visibility = 'hidden';
-					}
-					me._scrollarea_2__vertScrollBg.style.height = me._scrollarea_2.ggAvailableHeight + 'px';
-					me._scrollarea_2.ggVPercentVisible = contentHeight != 0 ? me._scrollarea_2.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._scrollarea_2.ggVPercentVisible > 1.0) me._scrollarea_2.ggVPercentVisible = 1.0;
-					me._scrollarea_2.ggScrollHeight =  Math.round(me._scrollarea_2__vertScrollBg.offsetHeight * me._scrollarea_2.ggVPercentVisible);
-					me._scrollarea_2__vertScrollFg.style.height = me._scrollarea_2.ggScrollHeight + 'px';
-					me._scrollarea_2.ggScrollPosY = me._scrollarea_2.ggScrollPosYPercent * me._scrollarea_2.ggAvailableHeight;
-					me._scrollarea_2.ggScrollPosY = Math.min(me._scrollarea_2.ggScrollPosY, me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-					me._scrollarea_2__vertScrollFg.style.top = me._scrollarea_2.ggScrollPosY + 'px';
-					if (me._scrollarea_2.ggVPercentVisible < 1.0) {
-						let percentScrolled = me._scrollarea_2.ggScrollPosY / (me._scrollarea_2__vertScrollBg.offsetHeight - me._scrollarea_2__vertScrollFg.offsetHeight);
-						me._scrollarea_2__content.style.top = -(Math.round((me._scrollarea_2.ggContentHeight * (1.0 - me._scrollarea_2.ggVPercentVisible)) * percentScrolled)) + me._scrollarea_2.ggContentTopOffset + 'px';
-					}
-				} else {
-					me._scrollarea_2.ggAvailableWidth = me._scrollarea_2.clientWidth;
-					me._scrollarea_2.ggScrollPosY = 0;
-					me._scrollarea_2.ggScrollPosYPercent = 0.0;
-					me._scrollarea_2__content.style.top = this.ggContentTopOffset + 'px';
-					me._scrollarea_2__cornerBg.style.visibility = 'hidden';
-				}
-				if(horScrollWasVisible != me._scrollarea_2.ggHorScrollVisible || vertScrollWasVisible != me._scrollarea_2.ggVertScrollVisible) {
-					skin.updateSize(me._scrollarea_2);
-					me._scrollarea_2.ggUpdatePosition();
-				}
-			}
-		}
 		el=me._text_3m=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._text_3m;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
 		els=me._text_3m__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text 3-M";
 		el.ggDy=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'translate(0px, -50%) ' };
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
+		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(145,145,145,1);';
-		hs+='height : auto;';
+		hs+='cursor : default;';
+		hs+='height : 100%;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((0px + 0px) / 2) + 0px);';
-		hs+='transform : translate(0px, -50%);;';
+		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
@@ -2722,18 +2327,20 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='width: 100%;';
 		hs+='height: auto;';
-		hs+='border : 0px solid #000000;';
-		hs+='cursor : default;';
+		hs+='max-height: 100%;';
 		hs+='font-size: 9px;';
 		hs+='font-weight: inherit;';
 		hs+='text-align: left;';
+		hs+='position: absolute;';
+		hs+='top: 50%;';
+		hs+='transform: translate(0, -50%);';
 		hs+='white-space: pre-line;';
 		hs+='padding: 0px 0px 0px 0px;';
 		hs+='overflow: hidden;';
 		els.setAttribute('style',hs);
 		me._text_3m.ggUpdateText=function() {
 			var params = [];
-			var hs = player._("\u203b \uc704 VR\uc740 \uc2e4\uc81c \uacac\ubcf8\uc8fc\ud0dd\uc744 \ucd2c\uc601\ud55c \uc601\uc0c1\uc73c\ub85c \uc2dc\uacf5 \ud6c4, \ub2e4\uc18c \ucc28\uc774\uac00 \ub0a0 \uc218 \uc788\uc2b5\ub2c8\ub2e4.\n\u203b \uc704 VR\uc740 \uc785\uc8fc\uc790\uc758 \uc774\ud574\ub97c \ub3d5\uae30 \uc704\ud574 \uac01\uc885 \uc804\uc2dc\ubb3c, \uc5f0\ucd9c\uc6a9 \uc870\uba85 \ub4f1\uc744 \ud65c\uc6a9\ud574 \n   \uc2dc\uacf5\ud55c \ubd80\ubd84\uc774 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4. \n\u203b \uacac\ubcf8\uc8fc\ud0dd\uc5d0 \uc2dc\uacf5\ub41c, \ubc14\ub2e5\uc7ac, \ubcbd\uc9c0\ub958, \ud0c0\uc77c\ub958, \uae30\uae30\ub958 \ubc0f \uae30\ud0c0 \uc81c\ud488\uc740 \uc785\uc8fc \uc2dc \n   \ub3d9\uc9c8, \ub3d9\uac00\uc758 \uc81c\ud488\uc73c\ub85c \ubcc0\uacbd\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.  ", params);
+			var hs = player._("\u203b \uc704 VR\uc740 \uc2e4\uc81c \uacac\ubcf8\uc8fc\ud0dd\uc744 \ucd2c\uc601\ud55c \uc601\uc0c1\uc73c\ub85c \uc2dc\uacf5 \ud6c4, \ub2e4\uc18c \ucc28\uc774\uac00 \ub0a0 \uc218 \uc788\uc2b5\ub2c8\ub2e4.\n\u203b \uc704 VR\uc740 \uc785\uc8fc\uc790\uc758 \uc774\ud574\ub97c \ub3d5\uae30 \uc704\ud574 \uac01\uc885 \uc804\uc2dc\ubb3c, \uc5f0\ucd9c\uc6a9 \uc870\uba85 \ub4f1\uc744 \ud65c\uc6a9\ud574 \uc2dc\uacf5\ud55c \ubd80\ubd84\uc774 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4. \n\u203b \uacac\ubcf8\uc8fc\ud0dd\uc5d0 \uc2dc\uacf5\ub41c, \ubc14\ub2e5\uc7ac, \ubcbd\uc9c0\ub958, \ud0c0\uc77c\ub958, \uae30\uae30\ub958 \ubc0f \uae30\ud0c0 \uc81c\ud488\uc740 \uc785\uc8fc \uc2dc \ub3d9\uc9c8, \ub3d9\uac00\uc758 \uc81c\ud488\uc73c\ub85c \ubcc0\uacbd\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.  ", params);
 			if (hs!=this.ggText) {
 				this.ggText=hs;
 				this.ggTextDiv.innerHTML=hs;
@@ -2756,8 +2363,7 @@ function pano2vrSkin(player,base) {
 		}
 		me._text_3m.ggUpdatePosition=function (useTransition) {
 		}
-		me._scrollarea_2__content.appendChild(me._text_3m);
-		me._footer_infom.appendChild(me._scrollarea_2);
+		me._footer_infom.appendChild(me._text_3m);
 		me._footer_bg.appendChild(me._footer_infom);
 		el=me.__7=document.createElement('div');
 		el.ggId="\ubd84\uc591 \ubb38\uc758";
@@ -3489,7 +3095,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : 21px;';
 		hs+='visibility : inherit;';
-		hs+='width : 80%;';
+		hs+='width : 76%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.setAttribute('tabindex', '0');
@@ -5363,7 +4969,7 @@ function pano2vrSkin(player,base) {
 		hs+='right : 0%;';
 		hs+='top : 0px;';
 		hs+='visibility : inherit;';
-		hs+='width : 20%;';
+		hs+='width : 24%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -6721,7 +6327,6 @@ function pano2vrSkin(player,base) {
 			me._map_2.ggInitMap(false);
 			me._map_2.ggInitMapMarkers(true);
 			me._svg_4.logicBlock_angle();
-			me._scrollarea_2.ggUpdatePosition();
 			me._timer_1.ggTimestamp=skin.ggCurrentTime;
 			me._timer_1.ggTimeout=1000;
 			me._scrollarea_1.ggUpdatePosition();
