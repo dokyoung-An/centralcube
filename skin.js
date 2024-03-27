@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.10/20025
 // Filename: ?? VR 1??? - ????.ggsk
-// Generated 2024-03-27T19:21:00
+// Generated 2024-03-27T19:58:32
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_floorplan', 2, false, { ignoreInState: 0  });
@@ -2724,7 +2724,7 @@ function pano2vrSkin(player,base) {
 		hs+='height: auto;';
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
-		hs+='font-size: 11px;';
+		hs+='font-size: 9px;';
 		hs+='font-weight: inherit;';
 		hs+='text-align: left;';
 		hs+='white-space: pre-line;';
@@ -2832,7 +2832,7 @@ function pano2vrSkin(player,base) {
 		hs+='height : 50%;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : 0px;';
+		hs+='top : 6px;';
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
@@ -2849,7 +2849,8 @@ function pano2vrSkin(player,base) {
 		hs+='font-weight: 900;';
 		hs+='text-align: right;';
 		hs+='position: absolute;';
-		hs+='bottom: 0px;';
+		hs+='top: 50%;';
+		hs+='transform: translate(0, -50%);';
 		hs+='white-space: pre;';
 		hs+='padding: 0px;';
 		hs+='overflow: hidden;';
@@ -2891,7 +2892,7 @@ function pano2vrSkin(player,base) {
 		el.ggType='text';
 		hs ='';
 		hs+='border : 0px solid #000000;';
-		hs+='bottom : 6px;';
+		hs+='bottom : 9px;';
 		hs+='color : rgba(27,32,37,1);';
 		hs+='cursor : default;';
 		hs+='height : 50%;';
@@ -3288,7 +3289,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='height : 100px;';
+		hs+='height : 90px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
@@ -3483,10 +3484,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 0px 0px 50px 0px;';
 		hs+='cursor : default;';
-		hs+='height : 20px;';
-		hs+='left : 1px;';
+		hs+='height : 22px;';
+		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : 31px;';
+		hs+='top : 21px;';
 		hs+='visibility : inherit;';
 		hs+='width : 80%;';
 		hs+='pointer-events:auto;';
@@ -3510,16 +3511,17 @@ function pano2vrSkin(player,base) {
 		me.__.appendChild(me._rectangle_11);
 		el=me.__1=document.createElement('div');
 		el.ggId="\ubaa8\ubc14\uc77c \uacf5\uac04\uc120\ud0dd";
+		el.ggDy=23;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
 		hs+='z-index: 9999;';
-		hs+='bottom : 0px;';
-		hs+='height : 35%;';
+		hs+='height : 35.5556%;';
 		hs+='left : 15px;';
 		hs+='position : absolute;';
+		hs+='top : calc(50% - ((35.5556% + 0px) / 2) + 23px);';
 		hs+='visibility : inherit;';
 		hs+='width : 65%;';
 		hs+='pointer-events:none;';
@@ -3587,13 +3589,13 @@ function pano2vrSkin(player,base) {
 		el.ggHPercentVisible = 1.0;
 		el.ggIsDragging = false;
 		hs ='';
-		hs+='height : 33.475px;';
+		hs+='height : 38.5px;';
 		hs+='left : 0px;';
 		hs+='overflow-x : visible;';
 		hs+='overflow-y : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 539px;';
+		hs+='width : 419px;';
 		hs+="";
 		els.setAttribute('style',hs);
 		me._scrollarea_1.ggScrollByX = function(diffX) {
@@ -3831,106 +3833,6 @@ function pano2vrSkin(player,base) {
 			var wheelDelta = Math.sign(e.deltaX);
 			me._scrollarea_1.ggScrollByXSmooth(30 * me._scrollarea_1.ggHPercentVisible * wheelDelta);
 		});
-		elVertScrollBg = me._scrollarea_1__vertScrollBg = document.createElement('div');
-		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 1px; height: 35px; background-color: rgba(255,255,255,1); pointer-events: auto;');
-		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._scrollarea_1__vertScrollFg = document.createElement('div');
-		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 1px; height: 35px; background-color: rgba(2,109,243,1); pointer-events: auto;');
-		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._scrollarea_1.ggScrollPosY = 0;
-		me._scrollarea_1.ggScrollPosYPercent = 0.0;
-		elVertScrollFg.onmousedown = function(e) {
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			me._scrollarea_1.ggDragLastY = e.clientY;
-			document.onmouseup = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_1.ggDragInertiaY *= 0.65;
-					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.onmouseup = null;
-				document.onmousemove = null;
-			}
-			document.onmousemove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var diffY = e.clientY - me._scrollarea_1.ggDragLastY;
-				me._scrollarea_1.ggDragInertiaY = diffY;
-				me._scrollarea_1.ggDragLastY = e.clientY;
-				me._scrollarea_1.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollFg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			me._scrollarea_1.ggDragLastY = t ? t[0].clientY : e.clientY;
-			document.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._scrollarea_1.ggDragInertiaY *= 0.65;
-					me._scrollarea_1.ggScrollByY(me._scrollarea_1.ggDragInertiaY);
-					if (Math.abs(me._scrollarea_1.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 50);
-				document.ontouchend = null;
-				document.ontouchmove = null;
-				document.onpointerup = null;
-				document.onpointermove = null;
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointerup = document.ontouchend;
-			}
-			document.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffY = (t ? t[0].clientY : e.clientY) - me._scrollarea_1.ggDragLastY;
-				me._scrollarea_1.ggDragInertiaY = diffY;
-				me._scrollarea_1.ggDragLastY = t ? t[0].clientY : e.clientY;
-				me._scrollarea_1.ggScrollByY(diffY);
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointermove = document.ontouchmove;
-			}
-		}
-		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			elVertScrollFg.onpointerdown = elVertScrollFg.ontouchstart;
-		}
-		elVertScrollBg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			var diffY = me._scrollarea_1.ggScrollHeight;
-			if (e.offsetY < me._scrollarea_1.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_1.ggScrollByYSmooth(diffY);
-		}
-		elVertScrollBg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			var rect = me._scrollarea_1__vertScrollBg.getBoundingClientRect();
-			var diffY = me._scrollarea_1.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._scrollarea_1.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._scrollarea_1.ggScrollByYSmooth(diffY);
-		}
-		el.addEventListener('wheel', function(e) {
-			e.preventDefault();
-			var wheelDelta = Math.sign(e.deltaY);
-			me._scrollarea_1.ggScrollByYSmooth(30 * me._scrollarea_1.ggVPercentVisible * wheelDelta);
-		});
 		elCornerBg = me._scrollarea_1__cornerBg = document.createElement('div');
 		el.appendChild(elCornerBg);
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 1px; height: 1px; background-color: rgba(255,255,255,1);');
@@ -3943,11 +3845,11 @@ function pano2vrSkin(player,base) {
 		el.ggType='scrollarea';
 		hs ='';
 		hs+='border : 0px solid #000000;';
-		hs+='height : 100%;';
+		hs+='height : 43px;';
 		hs+='left : 0px;';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((43px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
@@ -4013,7 +3915,7 @@ function pano2vrSkin(player,base) {
 				this.ggContentHeight = contentHeight / scaleY;
 				this.ggContent.style.left = -(Math.round(me._scrollarea_1.ggScrollPosX / me._scrollarea_1.ggHPercentVisible)) + this.ggContentLeftOffset + 'px';
 				this.ggContent.style.marginLeft = '0px';
-				this.ggContent.style.top = -(Math.round(me._scrollarea_1.ggScrollPosY / me._scrollarea_1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+				this.ggContent.style.top = this.ggContentTopOffset + 'px';
 				this.ggContent.style.marginTop = '0px';
 				if (contentWidth > Math.ceil(offsetWidthWithScale)) {
 					me._scrollarea_1__horScrollBg.style.visibility = 'inherit';
@@ -4023,20 +3925,6 @@ function pano2vrSkin(player,base) {
 					me._scrollarea_1__horScrollBg.style.visibility = 'hidden';
 					me._scrollarea_1__horScrollFg.style.visibility = 'hidden';
 					me._scrollarea_1.ggHorScrollVisible = false;
-				}
-				if ((me._scrollarea_1.ggHorScrollVisible && contentHeight > this.clientHeight - 1) || (!me._scrollarea_1.ggHorScrollVisible && contentHeight > this.clientHeight)) {
-					me._scrollarea_1__vertScrollBg.style.visibility = 'inherit';
-					me._scrollarea_1__vertScrollFg.style.visibility = 'inherit';
-					me._scrollarea_1.ggVertScrollVisible = true;
-					if (!me._scrollarea_1.ggHorScrollVisible && (contentWidth > offsetWidthWithScale - me._scrollarea_1__vertScrollBg.getBoundingClientRect().width)) {
-						me._scrollarea_1__horScrollBg.style.visibility = 'inherit';
-						me._scrollarea_1__horScrollFg.style.visibility = 'inherit';
-						me._scrollarea_1.ggHorScrollVisible = true;
-					}
-				} else {
-					me._scrollarea_1__vertScrollBg.style.visibility = 'hidden';
-					me._scrollarea_1__vertScrollFg.style.visibility = 'hidden';
-					me._scrollarea_1.ggVertScrollVisible = false;
 				}
 				if(me._scrollarea_1.ggHorScrollVisible) {
 					me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.clientHeight - 1;
@@ -4065,36 +3953,6 @@ function pano2vrSkin(player,base) {
 					me._scrollarea_1.ggScrollPosXPercent = 0.0;
 					me._scrollarea_1__content.style.left = this.ggContentLeftOffset + 'px';
 				}
-				if(me._scrollarea_1.ggVertScrollVisible) {
-					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.clientWidth - 1;
-					if (me._scrollarea_1.ggHorScrollVisible) {
-						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.clientHeight - 1;
-						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height - me._scrollarea_1__vertScrollBg.getBoundingClientRect().width;
-						me._scrollarea_1__cornerBg.style.visibility = 'inherit';
-					} else {
-						me._scrollarea_1.ggAvailableHeight = me._scrollarea_1.clientHeight;
-						me._scrollarea_1.ggAvailableHeightWithScale = me._scrollarea_1.getBoundingClientRect().height;
-						me._scrollarea_1__cornerBg.style.visibility = 'hidden';
-					}
-					me._scrollarea_1__vertScrollBg.style.height = me._scrollarea_1.ggAvailableHeight + 'px';
-					me._scrollarea_1.ggVPercentVisible = contentHeight != 0 ? me._scrollarea_1.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._scrollarea_1.ggVPercentVisible > 1.0) me._scrollarea_1.ggVPercentVisible = 1.0;
-					me._scrollarea_1.ggScrollHeight =  Math.round(me._scrollarea_1__vertScrollBg.offsetHeight * me._scrollarea_1.ggVPercentVisible);
-					me._scrollarea_1__vertScrollFg.style.height = me._scrollarea_1.ggScrollHeight + 'px';
-					me._scrollarea_1.ggScrollPosY = me._scrollarea_1.ggScrollPosYPercent * me._scrollarea_1.ggAvailableHeight;
-					me._scrollarea_1.ggScrollPosY = Math.min(me._scrollarea_1.ggScrollPosY, me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
-					me._scrollarea_1__vertScrollFg.style.top = me._scrollarea_1.ggScrollPosY + 'px';
-					if (me._scrollarea_1.ggVPercentVisible < 1.0) {
-						let percentScrolled = me._scrollarea_1.ggScrollPosY / (me._scrollarea_1__vertScrollBg.offsetHeight - me._scrollarea_1__vertScrollFg.offsetHeight);
-						me._scrollarea_1__content.style.top = -(Math.round((me._scrollarea_1.ggContentHeight * (1.0 - me._scrollarea_1.ggVPercentVisible)) * percentScrolled)) + me._scrollarea_1.ggContentTopOffset + 'px';
-					}
-				} else {
-					me._scrollarea_1.ggAvailableWidth = me._scrollarea_1.clientWidth;
-					me._scrollarea_1.ggScrollPosY = 0;
-					me._scrollarea_1.ggScrollPosYPercent = 0.0;
-					me._scrollarea_1__content.style.top = this.ggContentTopOffset + 'px';
-					me._scrollarea_1__cornerBg.style.visibility = 'hidden';
-				}
 				if(horScrollWasVisible != me._scrollarea_1.ggHorScrollVisible || vertScrollWasVisible != me._scrollarea_1.ggVertScrollVisible) {
 					skin.updateSize(me._scrollarea_1);
 					me._scrollarea_1.ggUpdatePosition();
@@ -4110,7 +3968,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\uac70\uc2e4\ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4120,10 +3978,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
+		hs+='height : 72%;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4190,10 +4048,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
@@ -4254,7 +4112,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\uc695\uc2e4\ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4264,10 +4122,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 480px;';
+		hs+='height : 72%;';
+		hs+='left : 360px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4334,10 +4192,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4398,7 +4256,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\uc8fc\ubc29\ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4408,10 +4266,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 400px;';
+		hs+='height : 72%;';
+		hs+='left : 300px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4478,10 +4336,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4565,7 +4423,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\ub2e4\ub77d2 \ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4575,10 +4433,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 320px;';
+		hs+='height : 72%;';
+		hs+='left : 240px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4645,10 +4503,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4709,7 +4567,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\ub2e4\ub77d1 \ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4719,10 +4577,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 240px;';
+		hs+='height : 72%;';
+		hs+='left : 180px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4789,10 +4647,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4853,7 +4711,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\uce68\uc2e42 \ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -4863,10 +4721,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 160px;';
+		hs+='height : 72%;';
+		hs+='left : 120px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((72% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4933,10 +4791,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -4997,7 +4855,7 @@ function pano2vrSkin(player,base) {
 			return false;
 		}
 		el.ggId="\uce68\uc2e41 \ubc30\uacbd-m";
-		el.ggDy=0;
+		el.ggDy=2;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -5007,10 +4865,10 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='cursor : default;';
-		hs+='height : 97%;';
-		hs+='left : 80px;';
+		hs+='height : 71.875%;';
+		hs+='left : 60px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((97% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((71.875% + 0px) / 2) + 2px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -5076,10 +4934,10 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : pointer;';
-		hs+='height : 100%;';
+		hs+='height : 32px;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((32px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
@@ -5135,215 +4993,6 @@ function pano2vrSkin(player,base) {
 		me.__m0.appendChild(me._scrollarea_1);
 		me.__1.appendChild(me.__m0);
 		me.__.appendChild(me.__1);
-		el=me.__m=document.createElement('div');
-		el.ggId="\ud3c9\uba74\ub3c4 -\ubc84\ud2bc-M";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='z-index: 999;';
-		hs+='bottom : 8px;';
-		hs+='cursor : pointer;';
-		hs+='height : 30px;';
-		hs+='position : absolute;';
-		hs+='right : 15px;';
-		hs+='visibility : inherit;';
-		hs+='width : 70px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me.__m.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me.__m.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._rectangle_6m=document.createElement('div');
-		el.ggId="Rectangle 6-M";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_rectangle ";
-		el.ggType='rectangle';
-		hs ='';
-		hs+='border : 0px solid #000000;';
-		hs+='border-radius : 25px;';
-		hs+='cursor : default;';
-		hs+='height : 100%;';
-		hs+='position : absolute;';
-		hs+='right : 0px;';
-		hs+='top : 0px;';
-		hs+='visibility : inherit;';
-		hs+='width : 100%;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._rectangle_6m.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._rectangle_6m.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._svg_4m=document.createElement('div');
-		els=me._svg_4m__img=document.createElement('img');
-		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PHN2ZyBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSIjZmZmZmZmIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+CiA8cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSIvPgo8L3N2Zz4K';
-		me._svg_4m__img.setAttribute('src',hs);
-		hs ='';
-		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
-		els.setAttribute('style', hs);
-		els['ondragstart']=function() { return false; };
-		el.appendChild(els);
-		el.ggSubElement = els;
-		el.ggId="Svg 4-M";
-		el.ggDy=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_svg ";
-		el.ggType='svg';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='position : absolute;';
-		hs+='right : 11px;';
-		hs+='top : calc(50% - ((20px + 0px) / 2) + 0px);';
-		hs+='visibility : inherit;';
-		hs+='width : 13px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._svg_4m.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._svg_4m.logicBlock_angle = function() {
-			var newLogicStateAngle;
-			if (
-				((player.getVariableValue('vis_floorplan') == true))
-			)
-			{
-				newLogicStateAngle = 0;
-			}
-			else {
-				newLogicStateAngle = -1;
-			}
-			if (me._svg_4m.ggCurrentLogicStateAngle != newLogicStateAngle) {
-				me._svg_4m.ggCurrentLogicStateAngle = newLogicStateAngle;
-				me._svg_4m.style.transition='transform 0s';
-				if (me._svg_4m.ggCurrentLogicStateAngle == 0) {
-					me._svg_4m.ggParameter.a = 180;
-					me._svg_4m.style.transform=parameterToTransform(me._svg_4m.ggParameter);
-				}
-				else {
-					me._svg_4m.ggParameter.a = 0;
-					me._svg_4m.style.transform=parameterToTransform(me._svg_4m.ggParameter);
-				}
-			}
-		}
-		me._svg_4m.logicBlock_angle();
-		me._svg_4m.onclick=function (e) {
-			player.setVariableValue('vis_floorplan', !player.getVariableValue('vis_floorplan'));
-		}
-		me._svg_4m.ggUpdatePosition=function (useTransition) {
-		}
-		me._rectangle_6m.appendChild(me._svg_4m);
-		el=me._text_4m=document.createElement('div');
-		els=me._text_4m__text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="Text 4-M";
-		el.ggDy=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_text ";
-		el.ggType='text';
-		hs ='';
-		hs+=cssPrefix + 'background-clip : padding-box;';
-		hs+='background-clip : padding-box;';
-		hs+='border-color : rgba(0,0,0,0);';
-		hs+='border-radius : 5px 0px 0px 0px;';
-		hs+='border-style : solid;';
-		hs+='border-width : 0px 0px 0px 0px;';
-		hs+='color : rgba(255,255,255,1);';
-		hs+='cursor : pointer;';
-		hs+='height : 100%;';
-		hs+='left : 0px;';
-		hs+='position : absolute;';
-		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
-		hs+='visibility : inherit;';
-		hs+='width : 50px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		hs ='';
-		hs += 'box-sizing: border-box;';
-		hs+='width: 100%;';
-		hs+='height: auto;';
-		hs+='max-height: 100%;';
-		hs+='font-size: 11px;';
-		hs+='font-weight: inherit;';
-		hs+='text-align: center;';
-		hs+='position: absolute;';
-		hs+='top: 50%;';
-		hs+='transform: translate(0, -50%);';
-		hs+='white-space: pre;';
-		hs+='padding: 1px;';
-		hs+='overflow: hidden;';
-		els.setAttribute('style',hs);
-		me._text_4m.ggUpdateText=function() {
-			var params = [];
-			var hs = player._("\ud3c9\uba74\ub3c4", params);
-			if (hs!=this.ggText) {
-				this.ggText=hs;
-				this.ggTextDiv.innerHTML=hs;
-				if (this.ggUpdatePosition) this.ggUpdatePosition();
-			}
-		}
-		me._text_4m.ggUpdateText();
-		el.appendChild(els);
-		me._text_4m.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._text_4m.onclick=function (e) {
-			player.setVariableValue('vis_floorplan', !player.getVariableValue('vis_floorplan'));
-		}
-		me._text_4m.ggUpdatePosition=function (useTransition) {
-		}
-		me._rectangle_6m.appendChild(me._text_4m);
-		me.__m.appendChild(me._rectangle_6m);
-		me.__.appendChild(me.__m);
 		el=me._m0=document.createElement('div');
 		el.ggId="\ud3c9\uba74\ub3c4-M";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -5800,6 +5449,217 @@ function pano2vrSkin(player,base) {
 		me.__0.ggUpdatePosition=function (useTransition) {
 		}
 		me.__2.appendChild(me.__0);
+		el=me.__m=document.createElement('div');
+		el.ggId="\ud3c9\uba74\ub3c4 -\ubc84\ud2bc-M";
+		el.ggDx=-1;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_container ";
+		el.ggType='container';
+		hs ='';
+		hs+='z-index: 999;';
+		hs+='bottom : -38px;';
+		hs+='cursor : pointer;';
+		hs+='height : 30px;';
+		hs+='left : calc(50% - ((60px + 0px) / 2) - 1px);';
+		hs+='position : absolute;';
+		hs+='visibility : inherit;';
+		hs+='width : 60px;';
+		hs+='pointer-events:none;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me.__m.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me.__m.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._rectangle_6m=document.createElement('div');
+		el.ggId="Rectangle 6-M";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='border : 0px solid #000000;';
+		hs+='border-radius : 25px;';
+		hs+='cursor : default;';
+		hs+='height : 100%;';
+		hs+='position : absolute;';
+		hs+='right : 0px;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 100%;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._rectangle_6m.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._rectangle_6m.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._svg_4m=document.createElement('div');
+		els=me._svg_4m__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		hs='data:image/svg+xml;base64,PHN2ZyBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSIjZmZmZmZmIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+CiA8cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSIvPgo8L3N2Zz4K';
+		me._svg_4m__img.setAttribute('src',hs);
+		hs ='';
+		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
+		els.setAttribute('style', hs);
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Svg 4-M";
+		el.ggDy=0;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 20px;';
+		hs+='position : absolute;';
+		hs+='right : 3px;';
+		hs+='top : calc(50% - ((20px + 0px) / 2) + 0px);';
+		hs+='visibility : inherit;';
+		hs+='width : 13px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._svg_4m.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._svg_4m.logicBlock_angle = function() {
+			var newLogicStateAngle;
+			if (
+				((player.getVariableValue('vis_floorplan') == true))
+			)
+			{
+				newLogicStateAngle = 0;
+			}
+			else {
+				newLogicStateAngle = -1;
+			}
+			if (me._svg_4m.ggCurrentLogicStateAngle != newLogicStateAngle) {
+				me._svg_4m.ggCurrentLogicStateAngle = newLogicStateAngle;
+				me._svg_4m.style.transition='transform 0s';
+				if (me._svg_4m.ggCurrentLogicStateAngle == 0) {
+					me._svg_4m.ggParameter.a = 180;
+					me._svg_4m.style.transform=parameterToTransform(me._svg_4m.ggParameter);
+				}
+				else {
+					me._svg_4m.ggParameter.a = 0;
+					me._svg_4m.style.transform=parameterToTransform(me._svg_4m.ggParameter);
+				}
+			}
+		}
+		me._svg_4m.logicBlock_angle();
+		me._svg_4m.onclick=function (e) {
+			player.setVariableValue('vis_floorplan', !player.getVariableValue('vis_floorplan'));
+		}
+		me._svg_4m.ggUpdatePosition=function (useTransition) {
+		}
+		me._rectangle_6m.appendChild(me._svg_4m);
+		el=me._text_4m=document.createElement('div');
+		els=me._text_4m__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 4-M";
+		el.ggDy=0;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+=cssPrefix + 'background-clip : padding-box;';
+		hs+='background-clip : padding-box;';
+		hs+='border-color : rgba(0,0,0,0);';
+		hs+='border-radius : 5px 0px 0px 0px;';
+		hs+='border-style : solid;';
+		hs+='border-width : 0px 0px 0px 0px;';
+		hs+='color : rgba(255,255,255,1);';
+		hs+='cursor : pointer;';
+		hs+='height : 100%;';
+		hs+='left : 0px;';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
+		hs+='visibility : inherit;';
+		hs+='width : 50px;';
+		hs+='pointer-events:auto;';
+		hs+='letter-spacing:1px;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs ='';
+		hs += 'box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: auto;';
+		hs+='max-height: 100%;';
+		hs+='font-size: 11px;';
+		hs+='font-weight: inherit;';
+		hs+='text-align: center;';
+		hs+='position: absolute;';
+		hs+='top: 50%;';
+		hs+='transform: translate(0, -50%);';
+		hs+='white-space: pre;';
+		hs+='padding: 1px;';
+		hs+='overflow: hidden;';
+		els.setAttribute('style',hs);
+		me._text_4m.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("\ud3c9\uba74\ub3c4", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_4m.ggUpdateText();
+		el.appendChild(els);
+		me._text_4m.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._text_4m.onclick=function (e) {
+			player.setVariableValue('vis_floorplan', !player.getVariableValue('vis_floorplan'));
+		}
+		me._text_4m.ggUpdatePosition=function (useTransition) {
+		}
+		me._rectangle_6m.appendChild(me._text_4m);
+		me.__m.appendChild(me._rectangle_6m);
+		me.__2.appendChild(me.__m);
 		me.__.appendChild(me.__2);
 		me.divSkin.appendChild(me.__);
 		el=me._markertemplate=document.createElement('div');
@@ -5874,21 +5734,21 @@ function pano2vrSkin(player,base) {
 				radar.xPos=activeMarker.radarXPos; radar.yPos=activeMarker.radarYPos;
 				if (radar.radarElement) me._map_1__mapdiv.removeChild(radar.radarElement);
 				radar.radarElement = document.createElementNS('http://www.w3.org/2000/svg','svg');
-				radar.radarElement.setAttributeNS(null,'width',100);
-				radar.radarElement.setAttributeNS(null,'height',100);
-				radar.radarElement.setAttributeNS(null,'viewBox','0 0 100 100');
+				radar.radarElement.setAttributeNS(null,'width',60);
+				radar.radarElement.setAttributeNS(null,'height',60);
+				radar.radarElement.setAttributeNS(null,'viewBox','0 0 60 60');
 				var radarPath = document.createElementNS('http://www.w3.org/2000/svg','path');
 				radarPath.setAttributeNS(null,'id','radarPath');
 				pan = -90 - pan;
-				var arcX1 = 50 * Math.cos((pan - fov / 2) * d2r);
-				var arcY1 = 50 * Math.sin((pan - fov / 2) * d2r);
-				var arcX2 = 50 * Math.cos((pan + fov / 2) * d2r);
-				var arcY2 = 50 * Math.sin((pan + fov / 2) * d2r);
-				arcX1 += 50;
-				arcY1 += 50;
-				arcX2 += 50;
-				arcY2 += 50;
-				var radarPathString = 'M50,50 L' + arcX1 + ',' + arcY1 + ' A 50 50 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
+				var arcX1 = 30 * Math.cos((pan - fov / 2) * d2r);
+				var arcY1 = 30 * Math.sin((pan - fov / 2) * d2r);
+				var arcX2 = 30 * Math.cos((pan + fov / 2) * d2r);
+				var arcY2 = 30 * Math.sin((pan + fov / 2) * d2r);
+				arcX1 += 30;
+				arcY1 += 30;
+				arcX2 += 30;
+				arcY2 += 30;
+				var radarPathString = 'M30,30 L' + arcX1 + ',' + arcY1 + ' A 30 30 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
 				radarPath.setAttributeNS(null,'d', radarPathString);
 				radarPath.setAttributeNS(null,'fill', '#026df3');
 				radarPath.setAttributeNS(null,'fill-opacity', 0.35);
@@ -5898,8 +5758,8 @@ function pano2vrSkin(player,base) {
 				radarPath.setAttributeNS(null,'stroke-linejoin', 'miter');
 				radar.radarElement.appendChild(radarPath);
 				me._map_1__mapdiv.appendChild(radar.radarElement);
-				var radarXPos = activeMarker.radarXPos - 50;
-				var radarYPos = activeMarker.radarYPos - 50;
+				var radarXPos = activeMarker.radarXPos - 30;
+				var radarYPos = activeMarker.radarYPos - 30;
 				radar.radarElement.style['position'] = 'absolute';
 				radar.radarElement.style['left'] = '' + radarXPos + 'px';
 				radar.radarElement.style['top'] = '' + radarYPos + 'px';
@@ -6071,21 +5931,21 @@ function pano2vrSkin(player,base) {
 				radar.xPos=activeMarker.radarXPos; radar.yPos=activeMarker.radarYPos;
 				if (radar.radarElement) me._map_2__mapdiv.removeChild(radar.radarElement);
 				radar.radarElement = document.createElementNS('http://www.w3.org/2000/svg','svg');
-				radar.radarElement.setAttributeNS(null,'width',100);
-				radar.radarElement.setAttributeNS(null,'height',100);
-				radar.radarElement.setAttributeNS(null,'viewBox','0 0 100 100');
+				radar.radarElement.setAttributeNS(null,'width',60);
+				radar.radarElement.setAttributeNS(null,'height',60);
+				radar.radarElement.setAttributeNS(null,'viewBox','0 0 60 60');
 				var radarPath = document.createElementNS('http://www.w3.org/2000/svg','path');
 				radarPath.setAttributeNS(null,'id','radarPath');
 				pan = -90 - pan;
-				var arcX1 = 50 * Math.cos((pan - fov / 2) * d2r);
-				var arcY1 = 50 * Math.sin((pan - fov / 2) * d2r);
-				var arcX2 = 50 * Math.cos((pan + fov / 2) * d2r);
-				var arcY2 = 50 * Math.sin((pan + fov / 2) * d2r);
-				arcX1 += 50;
-				arcY1 += 50;
-				arcX2 += 50;
-				arcY2 += 50;
-				var radarPathString = 'M50,50 L' + arcX1 + ',' + arcY1 + ' A 50 50 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
+				var arcX1 = 30 * Math.cos((pan - fov / 2) * d2r);
+				var arcY1 = 30 * Math.sin((pan - fov / 2) * d2r);
+				var arcX2 = 30 * Math.cos((pan + fov / 2) * d2r);
+				var arcY2 = 30 * Math.sin((pan + fov / 2) * d2r);
+				arcX1 += 30;
+				arcY1 += 30;
+				arcX2 += 30;
+				arcY2 += 30;
+				var radarPathString = 'M30,30 L' + arcX1 + ',' + arcY1 + ' A 30 30 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
 				radarPath.setAttributeNS(null,'d', radarPathString);
 				radarPath.setAttributeNS(null,'fill', '#026df3');
 				radarPath.setAttributeNS(null,'fill-opacity', 0.35);
@@ -6095,8 +5955,8 @@ function pano2vrSkin(player,base) {
 				radarPath.setAttributeNS(null,'stroke-linejoin', 'miter');
 				radar.radarElement.appendChild(radarPath);
 				me._map_2__mapdiv.appendChild(radar.radarElement);
-				var radarXPos = activeMarker.radarXPos - 50;
-				var radarYPos = activeMarker.radarYPos - 50;
+				var radarXPos = activeMarker.radarXPos - 30;
+				var radarYPos = activeMarker.radarYPos - 30;
 				radar.radarElement.style['position'] = 'absolute';
 				radar.radarElement.style['left'] = '' + radarXPos + 'px';
 				radar.radarElement.style['top'] = '' + radarYPos + 'px';
@@ -6257,7 +6117,6 @@ function pano2vrSkin(player,base) {
 		me.__1_m0.logicBlock_backgroundcolor();
 		me.__2_m.logicBlock_backgroundcolor();
 		me.__1_m.logicBlock_backgroundcolor();
-		me._svg_4m.logicBlock_angle();
 		me._map_1m.ggMarkerInstances=[];
 		me._map_1m.ggLastNodeId=null;
 		me._map_1m.ggSimpleFloorplanMarkerArray=[];
@@ -6286,21 +6145,21 @@ function pano2vrSkin(player,base) {
 				radar.xPos=activeMarker.radarXPos; radar.yPos=activeMarker.radarYPos;
 				if (radar.radarElement) me._map_1m__mapdiv.removeChild(radar.radarElement);
 				radar.radarElement = document.createElementNS('http://www.w3.org/2000/svg','svg');
-				radar.radarElement.setAttributeNS(null,'width',100);
-				radar.radarElement.setAttributeNS(null,'height',100);
-				radar.radarElement.setAttributeNS(null,'viewBox','0 0 100 100');
+				radar.radarElement.setAttributeNS(null,'width',50);
+				radar.radarElement.setAttributeNS(null,'height',50);
+				radar.radarElement.setAttributeNS(null,'viewBox','0 0 50 50');
 				var radarPath = document.createElementNS('http://www.w3.org/2000/svg','path');
 				radarPath.setAttributeNS(null,'id','radarPath');
 				pan = -90 - pan;
-				var arcX1 = 50 * Math.cos((pan - fov / 2) * d2r);
-				var arcY1 = 50 * Math.sin((pan - fov / 2) * d2r);
-				var arcX2 = 50 * Math.cos((pan + fov / 2) * d2r);
-				var arcY2 = 50 * Math.sin((pan + fov / 2) * d2r);
-				arcX1 += 50;
-				arcY1 += 50;
-				arcX2 += 50;
-				arcY2 += 50;
-				var radarPathString = 'M50,50 L' + arcX1 + ',' + arcY1 + ' A 50 50 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
+				var arcX1 = 25 * Math.cos((pan - fov / 2) * d2r);
+				var arcY1 = 25 * Math.sin((pan - fov / 2) * d2r);
+				var arcX2 = 25 * Math.cos((pan + fov / 2) * d2r);
+				var arcY2 = 25 * Math.sin((pan + fov / 2) * d2r);
+				arcX1 += 25;
+				arcY1 += 25;
+				arcX2 += 25;
+				arcY2 += 25;
+				var radarPathString = 'M25,25 L' + arcX1 + ',' + arcY1 + ' A 25 25 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
 				radarPath.setAttributeNS(null,'d', radarPathString);
 				radarPath.setAttributeNS(null,'fill', '#026df3');
 				radarPath.setAttributeNS(null,'fill-opacity', 0.35);
@@ -6310,8 +6169,8 @@ function pano2vrSkin(player,base) {
 				radarPath.setAttributeNS(null,'stroke-linejoin', 'miter');
 				radar.radarElement.appendChild(radarPath);
 				me._map_1m__mapdiv.appendChild(radar.radarElement);
-				var radarXPos = activeMarker.radarXPos - 50;
-				var radarYPos = activeMarker.radarYPos - 50;
+				var radarXPos = activeMarker.radarXPos - 25;
+				var radarYPos = activeMarker.radarYPos - 25;
 				radar.radarElement.style['position'] = 'absolute';
 				radar.radarElement.style['left'] = '' + radarXPos + 'px';
 				radar.radarElement.style['top'] = '' + radarYPos + 'px';
@@ -6483,21 +6342,21 @@ function pano2vrSkin(player,base) {
 				radar.xPos=activeMarker.radarXPos; radar.yPos=activeMarker.radarYPos;
 				if (radar.radarElement) me._map_2m__mapdiv.removeChild(radar.radarElement);
 				radar.radarElement = document.createElementNS('http://www.w3.org/2000/svg','svg');
-				radar.radarElement.setAttributeNS(null,'width',100);
-				radar.radarElement.setAttributeNS(null,'height',100);
-				radar.radarElement.setAttributeNS(null,'viewBox','0 0 100 100');
+				radar.radarElement.setAttributeNS(null,'width',50);
+				radar.radarElement.setAttributeNS(null,'height',50);
+				radar.radarElement.setAttributeNS(null,'viewBox','0 0 50 50');
 				var radarPath = document.createElementNS('http://www.w3.org/2000/svg','path');
 				radarPath.setAttributeNS(null,'id','radarPath');
 				pan = -90 - pan;
-				var arcX1 = 50 * Math.cos((pan - fov / 2) * d2r);
-				var arcY1 = 50 * Math.sin((pan - fov / 2) * d2r);
-				var arcX2 = 50 * Math.cos((pan + fov / 2) * d2r);
-				var arcY2 = 50 * Math.sin((pan + fov / 2) * d2r);
-				arcX1 += 50;
-				arcY1 += 50;
-				arcX2 += 50;
-				arcY2 += 50;
-				var radarPathString = 'M50,50 L' + arcX1 + ',' + arcY1 + ' A 50 50 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
+				var arcX1 = 25 * Math.cos((pan - fov / 2) * d2r);
+				var arcY1 = 25 * Math.sin((pan - fov / 2) * d2r);
+				var arcX2 = 25 * Math.cos((pan + fov / 2) * d2r);
+				var arcY2 = 25 * Math.sin((pan + fov / 2) * d2r);
+				arcX1 += 25;
+				arcY1 += 25;
+				arcX2 += 25;
+				arcY2 += 25;
+				var radarPathString = 'M25,25 L' + arcX1 + ',' + arcY1 + ' A 25 25 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
 				radarPath.setAttributeNS(null,'d', radarPathString);
 				radarPath.setAttributeNS(null,'fill', '#026df3');
 				radarPath.setAttributeNS(null,'fill-opacity', 0.35);
@@ -6507,8 +6366,8 @@ function pano2vrSkin(player,base) {
 				radarPath.setAttributeNS(null,'stroke-linejoin', 'miter');
 				radar.radarElement.appendChild(radarPath);
 				me._map_2m__mapdiv.appendChild(radar.radarElement);
-				var radarXPos = activeMarker.radarXPos - 50;
-				var radarYPos = activeMarker.radarYPos - 50;
+				var radarXPos = activeMarker.radarXPos - 25;
+				var radarYPos = activeMarker.radarYPos - 25;
 				radar.radarElement.style['position'] = 'absolute';
 				radar.radarElement.style['left'] = '' + radarXPos + 'px';
 				radar.radarElement.style['top'] = '' + radarYPos + 'px';
@@ -6652,6 +6511,7 @@ function pano2vrSkin(player,base) {
 		}
 		me._map_2m.logicBlock_visible();
 		me._map_2m.logicBlock_alpha();
+		me._svg_4m.logicBlock_angle();
 		var clonedNormalElement = new SkinElement_map_pin_Class(this,me._markertemplate);
 		me._markertemplate__normal = clonedNormalElement._map_pin;
 		me._markertemplate__normalInst = clonedNormalElement;
@@ -6770,7 +6630,6 @@ function pano2vrSkin(player,base) {
 			me.__1_m0.logicBlock_backgroundcolor();
 			me.__2_m.logicBlock_backgroundcolor();
 			me.__1_m.logicBlock_backgroundcolor();
-			me._svg_4m.logicBlock_angle();
 			me._map_1m.logicBlock_visible();
 			me._map_1m.logicBlock_alpha();
 			for (var i=0; i < me._map_1m.ggMarkerInstances.length; i++) {
@@ -6835,6 +6694,7 @@ function pano2vrSkin(player,base) {
 			}
 			me._map_2m.ggLastNodeId = id;
 			me._map_2m.ggRadar.update();
+			me._svg_4m.logicBlock_angle();
 			me._markertemplate__normalInst.ggEvent_changenode();
 			me._markertemplate__activeInst.ggEvent_changenode();
 		});
@@ -6865,7 +6725,6 @@ function pano2vrSkin(player,base) {
 			me._timer_1.ggTimestamp=skin.ggCurrentTime;
 			me._timer_1.ggTimeout=1000;
 			me._scrollarea_1.ggUpdatePosition();
-			me._svg_4m.logicBlock_angle();
 			me._map_1m.logicBlock_alpha();
 			for (var i=0; i < me._map_1m.ggMarkerInstances.length; i++) {
 				me._map_1m.ggMarkerInstances[i].ggEvent_configloaded();
@@ -6884,6 +6743,7 @@ function pano2vrSkin(player,base) {
 				me._map_2m.ggInitMap(false);
 				me._map_2m.ggInitMapMarkers(true);
 			}
+			me._svg_4m.logicBlock_angle();
 			me._markertemplate__normalInst.ggEvent_configloaded();
 			me._markertemplate__activeInst.ggEvent_configloaded();
 		});
@@ -6912,9 +6772,9 @@ function pano2vrSkin(player,base) {
 			me._map_1.logicBlock_alpha();
 			me._map_2.logicBlock_alpha();
 			me._svg_4.logicBlock_angle();
-			me._svg_4m.logicBlock_angle();
 			me._map_1m.logicBlock_alpha();
 			me._map_2m.logicBlock_alpha();
+			me._svg_4m.logicBlock_angle();
 		});
 		player.addListener('varchanged_vis_icon', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node')) {
@@ -7048,17 +6908,17 @@ function pano2vrSkin(player,base) {
 				me._map_pin_active.ggCurrentLogicStateSize = newLogicStateSize;
 				me._map_pin_active.style.transition='width 0s, height 0s, transform 200ms ease 0ms, opacity 500ms ease 0ms';
 				if (me._map_pin_active.ggCurrentLogicStateSize == 0) {
-					me._map_pin_active.style.width='10px';
-					me._map_pin_active.style.height='10px';
-					me._map_pin_active.style.left = 'calc(50% - (10px / 2))';
-					me._map_pin_active.style.top = 'calc(50% - (10px / 2))';
+					me._map_pin_active.style.width='13px';
+					me._map_pin_active.style.height='13px';
+					me._map_pin_active.style.left = 'calc(50% - (13px / 2))';
+					me._map_pin_active.style.top = 'calc(50% - (13px / 2))';
 					skin.updateSize(me._map_pin_active);
 				}
 				else if (me._map_pin_active.ggCurrentLogicStateSize == 1) {
-					me._map_pin_active.style.width='10px';
-					me._map_pin_active.style.height='10px';
-					me._map_pin_active.style.left = 'calc(50% - (10px / 2))';
-					me._map_pin_active.style.top = 'calc(50% - (10px / 2))';
+					me._map_pin_active.style.width='13px';
+					me._map_pin_active.style.height='13px';
+					me._map_pin_active.style.left = 'calc(50% - (13px / 2))';
+					me._map_pin_active.style.top = 'calc(50% - (13px / 2))';
 					skin.updateSize(me._map_pin_active);
 				}
 				else {
